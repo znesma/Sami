@@ -16,8 +16,19 @@ body{
     font-family: 'Cairo', sans-serif; 
     direction: rtl;
 }
+.main-btn{
+    color:white;
+    margin-top:50px;
+    border-radius: 27px;
+    background-color: var(--second-color);
+    padding:0.5em 1.5em;
+    transition:all 0.3s ease
+}
 h1,h2,h3,h4,h5,h6{
     color:var(--main-color)
+}
+.active{
+    color:var(--second-color) !important
 }
 /* Start navigation */
 .navbar-bg{
@@ -58,7 +69,9 @@ nav{
 .nav-item a:hover{
     color:var(--second-color)
 }
-
+.dropdown-menu li a{
+    color:var(--second-color)
+}
 @media(max-width:992px){
     .navbar{
         padding:5px;
@@ -123,14 +136,7 @@ header .header-content{
 
 
 }
-.main-btn{
-    color:white;
-    margin-top:50px;
-    border-radius: 3%;
-    background-color: var(--second-color);
-    padding:0.5em 1.5em;
-    transition:all 0.3s ease
-}
+
 .main-btn:hover{
     background-color: transparent;
     color:var(--second-color);
@@ -452,3 +458,21 @@ footer{
     padding-left:30px
 }
 /* End footer */
+/* Start scroll to top */
+.scroll{
+    position: relative;
+    display:none;
+
+}
+.scroll svg{
+    background-color: #ffffff;
+    color: #88be3e;
+    position: fixed;
+    bottom: 55px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+/* End scroll to top */
