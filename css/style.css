@@ -33,16 +33,17 @@ h1,h2,h3,h4,h5,h6{
 /* Start navigation */
 .navbar-bg{
     background-color: white;
-    width:100%;
+    /* width:100%; */
     height:80px;
     box-shadow: 1px 3px 3px  var(--second-color);
+    /* background-attachment: fixed; */
 }
 nav{
     color:white
 }
 
 .navbar-brand img{
-    width:30%;
+    width:60%;
     height:30%;
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
@@ -59,6 +60,7 @@ nav{
     width:30px;
     height:50px;
     border: none;
+    margin-right:80px
 }
 
 .nav-item a{
@@ -80,7 +82,7 @@ nav{
         background-color: #03485726
     }
     .navbar-brand img {
-        width: 30%;
+        width: 50%;
     }
     .nav-cont{
         display: flex;
@@ -105,10 +107,10 @@ nav{
 header{
     width:100%;
     height:100vh;
-    background-image: url("../img/header.webp");
+    background-image: url("../img/sami-1\ 1.png");
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top:-89px;
+    margin-top:-55px;
     position: relative;
 
     display: flex;
@@ -121,11 +123,12 @@ header{
     width:100%;
     top:0;
     left:0;
-    background-color: #0046562e
+    background-color: #0046562e;
+    background: linear-gradient(179.88deg, rgba(40, 65, 78, 0.93) 2.01%, rgba(40, 65, 78, 0) 72.3%);
 }
 header h1{
     font-weight:600;
-    color:var(--main-color)
+    color:#fff
 }
 header .header-content{
     position: absolute;
@@ -158,19 +161,25 @@ header .header-content{
 .about{
     padding:80px 0
 }
+.about-content{
+    margin-right:20px
+}
 .about h3{
     font-weight:600
 }
-.about img{
-    padding:2px;
-    border:2px solid var(--main-color);
-    border-radius: 3%;
-    width:80%
+
+.about .img{
+    background-image: url("../img/about.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
 }
 .about p{
     margin:30px 0;
     color:#333;
-    width:70%;
+    width:90%;
     line-height: 1.5em;
     font-size: 16px;
 }
@@ -178,7 +187,7 @@ header .header-content{
     .about{
         padding-bottom: 20px;
     }
-    .about img{
+    .about .img{
         display:none
     }
     .about-content h3{
@@ -189,6 +198,10 @@ header .header-content{
     .about p{
         text-align: center;
         width:100%
+    }
+    .about button{
+        display: block;
+        margin:auto;
     }
 }
 /* End about */
@@ -218,23 +231,23 @@ header .header-content{
 }
 
 .works .one{
-    background-image: url("../img/works1.webp");
+    background-image: url("../img/الأنظمة\ الجوية.png");
     background-size: cover;
     background-position: center;
 }
 .works .two{
-    background-image: url("../img/works2.webp");
+    background-image: url("../img/الالكترونيات\ الدفاعية.png");
     background-size: cover;
     
 }
 .works .three{
-    background-image: url("../img/works1.webp");
+    background-image: url("../img/التقنيات\ الحديثة.png");
     background-size: cover;
     background-position: center;
 
 }
 .works .four{
-    background-image: url("../img/works4.webp");
+    background-image: url("../img/الاسلحة\ والصواريخ.png");
     background-size: cover;
 }
 .works .box h4{
@@ -284,7 +297,7 @@ header .header-content{
 }
 .company .box-comp{
     padding:2px;
-    background-color: var(--second-color);
+    /* background-color: var(--second-color); */
     height:330px;
     display: flex;
     flex-direction: column;
@@ -292,6 +305,7 @@ header .header-content{
     align-items: center;
     margin-bottom: 25px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 3%;
 }
 
 /* End company  */
@@ -299,7 +313,7 @@ header .header-content{
 /* Start managment */
 .managment{
     margin-top:100px;
-    background-image: url(../img/i.jpg);
+    background-image: url(../img/الادارة.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -308,19 +322,21 @@ header .header-content{
     position: relative;
 }
 .managment .box-text{
+    padding: 15px;
     display: flex;
     flex-direction: column;
-    align-items:flex-start;
+    align-items: flex-start;
     position: absolute;
-    top:30%;
+    top: 30%;
     width: 45%;
-    background:#0046567a;
+    background: #0046567a;
+    border-radius: 27px;
 }
 .managment svg{
     margin:5px 10px 0 0
 }
 .managment .overlay{
-   background-color: #00465675
+   background-color: #00465647
 }
 @media(max-width:576px){
     .managment .box-text{
@@ -359,6 +375,53 @@ header .header-content{
 }
 /* End news */
 
+/* Start members */
+.members{
+    padding:100px 0;
+    background-image: url(../img/bg.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content:space-between;
+    position: relative;
+}
+.members .vid{
+    position: absolute;
+    z-index:10;
+    top:30%;
+    right:13px
+}
+.members .text{
+    padding: 20px;
+    height: 580px;
+    width: 100%;
+    padding-right: 155px;
+    background-color: #f9fcf870;
+    color: #706d6d;
+    margin: 20px;
+    border-radius: 1.5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+@media(max-width:991px){
+    .members .text{
+        display: none;
+    }
+    .members{
+        height:350px
+    }
+    .members .vid{
+        width: 80%;;
+        text-align: center;
+    }
+    .members .text p{
+        padding-bottom:20px
+    }
+
+}
+
+/* End members */
+
 /* Start numbers */
 .numbers{
     padding:50px;
@@ -375,11 +438,16 @@ header .header-content{
     margin: 20px 0;
     padding:15px;
     color:var(--main-color);
-    height:230px;
+    height:290px;
+    border-radius: 3%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .numbers .desc .icon{
-    font-size: 45px;
+    height:50%
+}
+.numbers .desc img{
+    padding:15px 0;
+    margin:20px 0
 }
 .numbers .desc .num{
     font-size: 40px;

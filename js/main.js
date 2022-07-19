@@ -5,10 +5,15 @@ $(function (){
         // console.log($(window).scrollTop()); 
         if($(window).scrollTop() >= 300){
             $(".navbar").addClass("navbar-bg");
+
+
+            $(".navbar-brand img").attr("src" , "img/الشركة_السعودية_للصناعات_العسكرية.png").width("20%");
             $(".nav-item a").css('color' ,' #777');
         }else{
             $(".navbar").removeClass("navbar-bg");
-            $(".nav-item a").css('color' ,' #fff')
+            $(".nav-item a").css('color' ,' #fff');
+            $(".navbar-brand img").attr("src" , "img/slogo.png").width("60%");
+
         }
     })
 
