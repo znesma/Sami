@@ -1,3 +1,5 @@
+//slow down the speed of header video
+document.querySelector('video').playbackRate = 0.5;
 
 $(function (){
     // navbar
@@ -30,7 +32,7 @@ $(function (){
     },function(){
         $(this).removeClass("box-text")
 
-    })
+    },1000)
 
     // counter
     $(".counter").counterUp({

@@ -68,8 +68,13 @@ nav{
     font-size: 15px;
     transition:0.3s
 }
-.nav-item a:hover{
+.nav-item a.nav-link:hover{
     color:var(--second-color)
+}
+.search svg{
+    color:var(--second-color);
+    margin:10px 20px 0 25px;
+    cursor: pointer;
 }
 .dropdown-menu li a{
     color:var(--second-color)
@@ -104,7 +109,7 @@ nav{
 
 /* End navigation */
 /* Start header */
-header{
+/* header{
     width:100%;
     height:100vh;
     background-image: url("../img/sami-1\ 1.png");
@@ -112,10 +117,28 @@ header{
     background-size: cover;
     margin-top:-55px;
     position: relative;
-
     display: flex;
     text-align: center;
     justify-content: center;
+    transition:all 1s;
+    transform: scaleX(2);
+
+   
+} */
+.header{
+    height:100vh;
+    width:100%
+}
+.header .video{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+    overflow: hidden;
+    display: block;
+    height:100vh;
+    width:110%
+    
 }
 .overlay{
     position: absolute;
@@ -127,8 +150,7 @@ header{
     background: linear-gradient(179.88deg, rgba(40, 65, 78, 0.93) 2.01%, rgba(40, 65, 78, 0) 72.3%);
 }
 header h1{
-    font-weight:600;
-    color:#fff
+    
 }
 header .header-content{
     position: absolute;
@@ -136,10 +158,12 @@ header .header-content{
     top:60%;
     left:50%;
     transform:translate(-50%,-50%)
-
-
 }
-
+header .header-content h1{
+    font-weight:600;
+    color:#fff;
+    font-size: 50px;
+}
 .main-btn:hover{
     background-color: transparent;
     color:var(--second-color);
@@ -165,7 +189,8 @@ header .header-content{
     margin-right:20px
 }
 .about h3{
-    font-weight:600
+    font-weight:600;
+    font-size: 30px;
 }
 
 .about .img{
@@ -182,6 +207,26 @@ header .header-content{
     width:90%;
     line-height: 1.5em;
     font-size: 16px;
+}
+.about .box{
+    text-align: center;
+    background-color: var(--second-color);
+    min-height: 290px;
+    width: 100%;
+    line-height: 12;
+    margin-top:35px;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about .image{
+   
+    padding-left:60px
+}
+.about .img4{
+    padding-bottom:45px;
+    padding-right:10px
 }
 @media(max-width:576px){
     .about{
@@ -208,6 +253,8 @@ header .header-content{
 /* Start works */
 .works{
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .no-p{
     padding:0;
@@ -215,39 +262,48 @@ header .header-content{
 }
 .works .box{
     height:600px;
-    width: 100%;
+    width: 101%;
     cursor: pointer;
     display: flex;
     align-items: flex-end;
     transition:  0.5s;
     position: relative;
 }
-.works .box:hover {
+
+.works .box:hover { 
     /* width:150%; */
     transform: scaleX(1.8);
+    z-index: 2;
     /* filter:blur(0.5px); */
-    z-index: 1000;
+    /* transform:scale(1.8,1); */
     margin-top:20px
 }
+
 
 .works .one{
     background-image: url("../img/الأنظمة\ الجوية.png");
     background-size: cover;
     background-position: center;
+ 
 }
+
 .works .two{
     background-image: url("../img/الالكترونيات\ الدفاعية.png");
     background-size: cover;
-    
+    background-position: center;
 }
 .works .three{
     background-image: url("../img/التقنيات\ الحديثة.png");
     background-size: cover;
-    background-position: center;
+    background-position: top;
 
 }
 .works .four{
     background-image: url("../img/الاسلحة\ والصواريخ.png");
+    background-size: cover;
+}
+.works .five{
+    background-image: url("../img/الالكترونيات\ الدفاعية.png");
     background-size: cover;
 }
 .works .box h4{
@@ -269,26 +325,23 @@ header .header-content{
     width:80%;
     font-size:14px;
     position: relative;
+    
 }
 .works .box-text:after{
-    content:"تتمثل رسالة الشركة في العمل على تطوير أحدث المنتجات التقنية مع التركيز على الإبداع والابتكار، وتقديم حلول متكاملة تساهم في دفع عجلة تطوير قطاع الصناعات العسكرية في المملكة والحفاظ على أمن المملكة وحلفائها.";
+    content:"الشركة السعودية للصناعات العسكرية (SAMI) تعمل على تطوير ودعم وتوطين الصناعات العسكرية والأمنية في المملكة العربية السعودية";
     position: absolute;
     background-color: #88be3ea8;
     color:#fff;
     padding:10px;
     opacity: 1;
     position: absolute;
-    top:50%;
+    top:27%;
     right:10%;
     width:80%;
     font-size:14px;
+}
 
-}
-@media(max-width:991px){
-    .works .box:hover {
-        transform: scaleX(1.1);
-    }
-}
+
 /* End works */
 
 /* Start company  */
@@ -296,18 +349,20 @@ header .header-content{
     margin-top:50px;
 }
 .company .box-comp{
-    padding:2px;
+    padding: 2px;
     /* background-color: var(--second-color); */
-    height:330px;
+    height: 298px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 49px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
     border-radius: 3%;
 }
-
+.company h2{
+    font-size: 25px;
+}
 /* End company  */
 
 /* Start managment */
@@ -317,9 +372,19 @@ header .header-content{
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height:500px;
+    height:700px;
     color:#fff;
     position: relative;
+}
+.managment span{
+    font-size:20px;
+    padding-bottom:20px;
+    display: inline-block;
+    color:var(--main-color);
+    color:#fff
+}
+.managment h1{
+    color:#fff
 }
 .managment .box-text{
     padding: 15px;
@@ -336,7 +401,33 @@ header .header-content{
     margin:5px 10px 0 0
 }
 .managment .overlay{
-   background-color: #00465647
+   background-color: #00465647;
+   width:100%;
+   position: absolute;
+   z-index: 2;
+}
+.desc{
+    background-color: rgba(255, 255, 255, 0.586);
+    margin: 20px 0;
+    padding:15px;
+    color:var(--main-color);
+    height:290px;
+    border-radius: 3%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+ .desc .icon{
+    height:50%
+}
+ .desc img{
+    padding:15px 0;
+    margin:20px 0
+}
+ .desc .num{
+    font-size: 40px;
+    font-weight: bold;
+}
+.desc p{
+    margin-top:15px
 }
 @media(max-width:576px){
     .managment .box-text{
@@ -391,9 +482,11 @@ header .header-content{
     top:30%;
     right:11%
 }
+.vid .frame{
+    border-radius: 3%;
+}
 .members .text{
     padding: 20px;
-    height: 580px;
     width: 100%;
     padding-right: 155px;
     background-color: #f9fcf870;
@@ -419,48 +512,12 @@ header .header-content{
     }
 
 }
-
 /* End members */
 
-/* Start numbers */
-.numbers{
-    padding:50px;
-    background-color: #FBFBFB;
-}
-.numbers span{
-    font-size:20px;
-    padding-bottom:20px;
-    display: inline-block;
-    color:var(--main-color)
-}
-.numbers .desc{
-    background-color: #fff;
-    margin: 20px 0;
-    padding:15px;
-    color:var(--main-color);
-    height:290px;
-    border-radius: 3%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.numbers .desc .icon{
-    height:50%
-}
-.numbers .desc img{
-    padding:15px 0;
-    margin:20px 0
-}
-.numbers .desc .num{
-    font-size: 40px;
-    font-weight: bold;
-}
-.numbers .desc p{
-    margin-top:15px
-}
-/* End numbers */
 /* Start footer */
 footer{
     background-color: var(--second-color);
-    padding:50px 0;
+    padding:80px 0;
     
 }
 .footer h2{
