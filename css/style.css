@@ -22,6 +22,7 @@ body{
     border-radius: 27px;
     background-color: var(--second-color);
     padding:0.5em 1.5em;
+    font-size: 1.25em;
     transition:all 0.3s ease
 }
 h1,h2,h3,h4,h5,h6{
@@ -45,7 +46,7 @@ nav{
 .navbar-brand img{
     width:60%;
     height:30%;
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    transition: 0.3s;
 }
 .navbar .navbar-toggler:focus{
     box-shadow: none;
@@ -109,22 +110,7 @@ nav{
 
 /* End navigation */
 /* Start header */
-/* header{
-    width:100%;
-    height:100vh;
-    background-image: url("../img/sami-1\ 1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top:-55px;
-    position: relative;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    transition:all 1s;
-    transform: scaleX(2);
 
-   
-} */
 .header{
     height:100vh;
     width:100%
@@ -183,73 +169,101 @@ header .header-content h1{
 
 /* Start about */
 .about{
-    padding:80px 0
+    background-color: #F8F9FA;
+    margin: -90px auto 22px
 }
-.about-content{
-    margin-right:20px
+.about h1{
+    margin-top:100px
 }
-.about h3{
-    font-weight:600;
-    font-size: 30px;
+.about .card {
+    background: none;
 }
-
-.about .img{
-    background-image: url("../img/about.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 5px;
+.about .about-overlay{
+    position:absolute;
+    background-color: #004656;
+    top:0;
+    left:0;
+    z-index: 5000;
 }
-.about p{
-    margin:30px 0;
-    color:#333;
-    width:90%;
-    line-height: 1.5em;
-    font-size: 16px;
+.about .card img{
+    border-radius:55%;
+    box-shadow: 3px 3px 5px var(--second-color) ,-1px 0 5px var(--second-color);
+    width:190px;
+    height:190px;
+    padding:1px;
+    margin:0 auto
 }
-.about .box{
-    text-align: center;
-    background-color: var(--second-color);
-    min-height: 290px;
-    width: 100%;
-    line-height: 12;
-    margin-top:35px;
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.about .image{
-   
-    padding-left:60px
-}
-.about .img4{
-    padding-bottom:45px;
-    padding-right:10px
-}
-@media(max-width:576px){
-    .about{
-        padding-bottom: 20px;
-    }
-    .about .img{
-        display:none
-    }
-    .about-content h3{
-        width: 100%;
-        text-align: center;
-    }
-   
-    .about p{
-        text-align: center;
-        width:100%
-    }
-    .about button{
-        display: block;
-        margin:auto;
-    }
+.about .card h5{
+    color:var(--second-color)
 }
 /* End about */
+/* Start vision */
+.vision{
+    width: 95%;
+    height: 600px;
+    position: relative;
+    margin: 0 auto;
+    background-color: #85de0a26;
+    border-radius: 2%;
+    margin-top: -4%;
+}
+ .vision .info{
+    
+}
+ .vision .info i.eye{
+    border:none
+ }
+.vision video{
+    position: absolute;
+    bottom: 29%;
+    left:8%;
+    border-radius: 5%;
+    border: 2px solid #777;
+
+}
+ .vision .bi-eye-fill::before,
+ .vision .bi-chat-dots-fill::before
+ {
+    color: var(--second-color);
+    font-size: 50px;
+ }
+ .vision .info span{
+    color:var(--main-color);
+    font-size: 30px;
+    margin-right:20px
+ }
+ .vision .info p{
+    margin-top:50px;
+    width:80%;
+    color:#7C819B
+  
+ }
+ .vision .card{
+    margin-top:90px;
+    padding-top:40px;
+    background-color: #fff9;
+    height:450px;
+    width:380px;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+
+ }
+ .vision .card-title{
+    padding-top: 165px;
+ }
+ .vision .card video{
+    position: absolute;
+    top: -72px;
+    left: 14px;
+    width: 93%;
+    height: 256px;
+    border: none;
+    border-radius: 3%;
+    /* box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%); */
+
+ }
+/* End vision */
+
 /* Start works */
 .works{
     display: flex;
@@ -269,7 +283,6 @@ header .header-content h1{
     transition:  0.5s;
     position: relative;
 }
-
 .works .box:hover { 
     /* width:150%; */
     transform: scaleX(1.8);
@@ -278,13 +291,10 @@ header .header-content h1{
     /* transform:scale(1.8,1); */
     margin-top:20px
 }
-
-
 .works .one{
     background-image: url("../img/الأنظمة\ الجوية.png");
     background-size: cover;
     background-position: center;
- 
 }
 
 .works .two{
@@ -513,29 +523,102 @@ header .header-content h1{
 
 }
 /* End members */
-
-/* Start footer */
-footer{
-    background-color: var(--second-color);
-    padding:80px 0;
-    
+/* Start value */
+.value{
+    padding:100px 0;
 }
+.value h1{
+    font-size: 47px;
+    font-weight: 800;
+    margin-bottom: 33px;
+}
+.value .box{
+    margin-bottom: 25px;
+    width: 100%;
+    height:150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: spin 7s linear infinite;
+    cursor: pointer;
+}
+.value .box svg{
+    transition: all .5s ease;
+}
+.value .box:hover svg,
+.value .box:hover .bi-lightbulb-fill::before,
+.value .box:hover .bi-brightness-high-fill::before{
+    color:white;
+    background-color: var(--main-color);
+}
+.value .box svg,
+.value .box .bi-lightbulb-fill::before,
+.value .box .bi-brightness-high-fill::before{
+    border: 5px solid var(--second-color);
+    box-shadow:0 4px 5px 0 rgb(0 0 0 / 54%), 0 6px 20px 0 rgb(0 0 0 / 2%);
+    border-radius: 50%;
+    color:#b9ec74;
+    padding:45px;
+    font-size: 50px;
+    transition: all .5s ease;
+
+}
+.award{
+    width:55px
+}
+
+.value span{
+    display: inline-block;
+    font-size: 25px;
+    margin-bottom: 49px;
+    color: var(--main-color);
+}
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-20deg);
+    }
+    80%{
+        transform: rotate(20deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+/* End footer */
+footer{
+    background-color:#36275D;
+    padding:80px 0 10px 0;
+    position: relative;
+}
+
+.footer .ship{
+    position: absolute;
+    top: -224px;
+    left: 3%;
+    width: 94%;
+    font-size: 250px;
+    color: #536755;
+}
+
 .footer h2{
     font-size: 20px;
-    color:#004656;
+    color:#fff;
     margin-top:20px
 }
 
 .footer .icons li{
     font-size: 18px;;
     color:#fff;
-    margin-left:15px;
-    margin-top:15px;
+    margin-left:20px;
+    margin-top:35px;
     cursor: pointer;
     transition: 0.3s;
 }
 .footer .icons li:hover{
-    color:var(--main-color);
+    color:var(--second-color);
     transform: scale(1.3);
 }
 .footer h2{
@@ -545,7 +628,11 @@ footer{
 .footer p,
 .footer h3{
     color:#fff;
-    margin-top:20px
+    margin-top:20px;
+}
+.footer h3{
+    padding:10px 0
+
 }
 .footer p{
     font-size: 15px;
@@ -557,7 +644,7 @@ footer{
 .footer span{
     font-weight: bold;
     font-size: 22px;
-    color:#fff
+    color:#C3BFCF
 }
 @media(max-width:576px){
     .footer{
@@ -567,8 +654,13 @@ footer{
         justify-content: center;
     }
 }
+hr{
+    color:#fff;
+    margin:100px 0;
+    width:80%;
+    margin: 30px auto
+}
 .copy-rights{
-    background-color: var(--main-color);
     color:#fff;
     display: flex;
     justify-content: space-around;
