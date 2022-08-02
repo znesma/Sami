@@ -13,7 +13,7 @@ $(function (){
         }else{
 
             $(".navbar").removeClass("navbar-bg");
-            $(".navbar-brand img").attr("src" , "img/slogo.png").width("60%");
+            $(".navbar-brand img").attr("src" , "img/Slogo.png").width("60%");
             $(".nav-item a").css('color' ,' #fff');
 
         }
@@ -32,7 +32,7 @@ $(function (){
     },function(){
         $(this).removeClass("box-text")
 
-    },1000)
+    },500)
 
     // counter
     $(".counter").counterUp({
